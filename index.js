@@ -60,7 +60,7 @@ process.env["MAIL"] = 'ux34@qq.com';
       mail && sendMail(mail, '登录失败，将在5分钟后重新尝试', err.message)
       return null
     })
-    if (!cookie) {
+    while (!cookie) {
       // 登录失败5分钟后再次尝试登录
       // 同步倒计时5分钟
       await syncTimeout(5*60)
