@@ -72,6 +72,27 @@ process.env["MAIL"] = 'ux34@qq.com';
       // 登录失败5分钟后再次尝试登录
       // 同步倒计时5分钟
       await syncTimeout(5*60)
+      cookie = await login(info)
+    }
+    
+    if (!cookie) {
+      // 登录失败5分钟后再次尝试登录
+      // 同步倒计时5分钟
+      await syncTimeout(5*60)
+      cookie = await login(info)
+    }
+    
+    if (!cookie) {
+      // 登录失败5分钟后再次尝试登录
+      // 同步倒计时5分钟
+      await syncTimeout(5*60)
+      cookie = await login(info)
+    }
+    
+    if (!cookie) {
+      // 登录失败5分钟后再次尝试登录
+      // 同步倒计时5分钟
+      await syncTimeout(5*60)
 
       // 再次失败就不管了
       // 不知道什么原因经常请求失败
